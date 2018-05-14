@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>HTTP 缓存 - SlimPHP中文网</title>
+    <meta name="description" content="" />
+    <meta name="author" content="SlimPHP中文网">
+    <meta name="keywords" content="">
+    <!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script><![endif]-->
+    <link rel="stylesheet" href="/assets/css/all.css" />
+    <link rel="shortcut icon" href="/assets/images/favicon.png" />
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?5f2c9e3fc7fc3a1c255d557a5fe0ca6b";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script>
+</head>
+
+<body style="padding-top: 5em">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img src="/assets/images/favicon.png" height="24px" alt="Slim" /></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/components">组件</a></li>
+                    <li class="active"><a href="/docs">文档</a></li>
+                    <li><a href="https://segmentfault.com/t/slim" target="_blank" rel="nofollow">讨论</a></li>
+                    <li><a href="https://github.com/slimphp/slim" target="_blank" rel="nofollow">Github</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper docs">
+        <div class="container-fluid">
+            <header class="site-header">
+                <div class="site-title"><a href="/">Slim</a></div>
+                <div class="site-slogan">一款 PHP 微框架</div>
+            </header>
+
+            <div class="row">
+                <div class="col-md-3">
+
+                    <h3 class="toc-title">开始使用</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs">文档首页</a></li>
+
+                        <li><a href="/docs/start/installation.html">安装</a></li>
+
+                        <li><a href="/docs/start/upgrade.html">升级指南</a></li>
+
+                        <li><a href="/docs/start/web-servers.html">Web 服务器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">教程</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/tutorial/first-app.html">造一款 Slim 应用</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">概念</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/concepts/value-objects.html">PSR 7</a></li>
+
+                        <li><a href="/docs/concepts/middleware.html">中间件</a></li>
+
+                        <li><a href="/docs/concepts/di.html">依赖容器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">The Application</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/application.html">概述</a></li>
+
+                        <li><a href="/docs/objects/application.html#application-configuration">配置</a></li>
+
+                        <li><a href="/docs/objects/application.html#slim-default-settings">默认设置</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">请求</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/request.html">概述</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-method">方法</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-headers">方法</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-body">体</a></li>
+
+                        <li><a href="/docs/objects/request.html#request-helpers">助手</a></li>
+
+                        <li><a href="/docs/objects/request.html#route-object">路由对象</a></li>
+
+                        <li><a href="/docs/objects/request.html#media-type-parsers">媒体类型解析器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">响应</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/response.html">概述</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-status">状态</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-headers">头</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-body">体</a></li>
+
+                        <li><a href="/docs/objects/response.html#returning-json">JSON</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">路由</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/router.html">概述</a></li>
+
+                        <li><a href="/docs/objects/router.html#how-to-create-routes">创建路由</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-callbacks">回调</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-strategies">策略</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-placeholders">占位符</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-names">名称</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-groups">组</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-middleware">中间件</a></li>
+
+                        <li><a href="/docs/objects/router.html#container-resolution">容器识别</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">错误处理</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/handlers/error.html">错误处理器</a></li>
+
+                        <li><a href="/docs/handlers/not-found.html">404 Not Found</a></li>
+
+                        <li><a href="/docs/handlers/not-allowed.html">405 Not Allowed</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">烹饪书</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/cookbook/route-patterns.html">以 / 结尾的路由</a></li>
+
+                        <li><a href="/docs/cookbook/ip-address.html">检索 IP 地址</a></li>
+
+                        <li><a href="/docs/cookbook/retrieving-current-route.html">检索当前路由</a></li>
+
+                        <li><a href="/docs/cookbook/database-eloquent.html">在 Slim 中使用 Eloquent</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">附加组件</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/features/templates.html">模版</a></li>
+
+                        <li><a href="/docs/features/caching.html">HTTP 缓存</a></li>
+
+                        <li><a href="/docs/features/csrf.html">CSRF 保护</a></li>
+
+                        <li><a href="/docs/features/flash.html">Flash Messages</a></li>
+
+                        <li><a href="https://github.com/slimphp/Slim/wiki/Middleware-for-Slim-Framework-v3.x" target="_blank">第三方组件</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-8 docs-content">
+                    <h1 class="page-header">HTTP 缓存</h1>
+                <div class="edit-panel" style="margin: 0 0 1em 0;">
+                    <a href="https://github.com/slimphp/Slim-Website/tree/gh-pages/docs/features/caching.md" target="_blank" class="btn btn-default btn-xs"><i class="fa fa-github"></i> Edit This Page</a>
+                </div>
+                <p>Slim 3 使用 <a href="https://github.com/slimphp/Slim-HttpCache">slimphp/Slim-HttpCache</a> 这款独立的 PHP 组件作为可选的 HTTP 缓存工具。可以使用这个组件创建并返回包含 <code>Cache</code>, <code>Expires</code>, <code>ETag</code>, 和 <code>Last-Modified</code> 头的 HTTP 响应，以控制何时以及如何使用客户端缓存保留应用程序的输出。</p>
+
+<h2 id="installation">安装</h2>
+
+<p>在你的项目的根目录下执行这个bash命令：</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">composer require slim/http-cache</code></pre></div>
+
+<h2 id="usage">用法</h2>
+
+<p>这个 <code>slimphp/Slim-HttpCache</code> 组件包含一个服务提供程序和一个应用程序中间件。你必须在你的应用程序中添加这两个玩意，像这样：</p>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">// Register service provider with the container</span>
+<span class="x">$container = new \Slim\Container;</span>
+<span class="x">$container[&#39;cache&#39;] = function () {</span>
+<span class="x">    return new \Slim\HttpCache\CacheProvider();</span>
+<span class="x">};</span>
+
+<span class="x">// Add middleware to the application</span>
+<span class="x">$app = new \Slim\App($container);</span>
+<span class="x">$app-&gt;add(new \Slim\HttpCache\Cache(&#39;public&#39;, 86400));</span>
+
+<span class="x">// Create your application routes...</span>
+
+<span class="x">// Run application</span>
+<span class="x">$app-&gt;run();</span></code></pre></div>
+
+<h2 id="etag">ETag</h2>
+
+<p>使用服务提供程序的 <code>withEtag()</code> 方法创建一个带有指定 <code>ETag</code> 头的响应对象。这个方法接收一个 PSR7 响应对象，而且它返回一个带有新 HTTP 头的 PSR7 响应的拷贝。</p>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$app-&gt;get(&#39;/foo&#39;, function ($req, $res, $args) {</span>
+<span class="x">    $resWithEtag = $this-&gt;cache-&gt;withEtag($res, &#39;abc&#39;);</span>
+
+<span class="x">    return $resWithEtag;</span>
+<span class="x">});</span></code></pre></div>
+
+<h2 id="expires">Expires</h2>
+
+<p>使用服务提供程序的 <code>withExpires()</code> 方法创建一个带有指定 <code>Expires</code> 头的响应对象。这个方法接收一个 PSR7 响应对象，而且它返回一个带有新的 HTTP 头的 PSR7 响应的拷贝。</p>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$app-&gt;get(&#39;/bar&#39;,function ($req, $res, $args) {</span>
+<span class="x">    $resWithExpires = $this-&gt;cache-&gt;withExpires($res, time() + 3600);</span>
+
+<span class="x">    return $resWithExpires;</span>
+<span class="x">});</span></code></pre></div>
+
+<h2 id="last-modified">Last-Modified</h2>
+
+<p>使用服务提供程序的<code>withLastModified()</code> 方法创建一个带有指定 <code>Last-Modified</code> 头的响应对象。这个方法接收一个 PSR7 响应对象，而且它返回一个带有新 HTTP 头的 PSR7 响应的拷贝。</p>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">//Example route with LastModified</span>
+<span class="x">$app-&gt;get(&#39;/foobar&#39;,function ($req, $res, $args) {</span>
+<span class="x">    $resWithLastMod = $this-&gt;cache-&gt;withLastModified($res, time() - 3600);</span>
+
+<span class="x">    return $resWithLastMod;</span>
+<span class="x">});</span></code></pre></div>
+                </div>
+            </div>
+            <footer class="site-footer">
+                <p>
+                    Created and maintained by
+                    <br/>
+                    <a href="http://joshlockhart.com">Josh Lockhart</a>,
+                    <a href="http://www.silentworks.co.uk" target="_blank">Andrew Smith</a>,
+                    <a href="http://akrabat.com/" target="_blank">Rob Allen</a>, and the
+                    <a href="https://github.com/orgs/slimphp/people" target="_blank">Slim Framework Team</a>
+                </p>
+                <p>中文文档由<a href="http://slimphp.net">SlimPHP中文网</a>整理翻译</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/assets/scripts/build/production.min.js"></script>
+</body>
+
+</html>

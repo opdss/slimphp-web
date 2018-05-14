@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>HTTP 响应 - SlimPHP中文网</title>
+    <meta name="description" content="" />
+    <meta name="author" content="SlimPHP中文网">
+    <meta name="keywords" content="">
+    <!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script><![endif]-->
+    <link rel="stylesheet" href="/assets/css/all.css" />
+    <link rel="shortcut icon" href="/assets/images/favicon.png" />
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+</head>
+
+<body style="padding-top: 5em">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img src="/assets/images/favicon.png" height="24px" alt="Slim" /></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/components">组件</a></li>
+                    <li class="active"><a href="/docs">文档</a></li>
+                    <li><a href="https://segmentfault.com/t/slim" target="_blank" rel="nofollow">讨论</a></li>
+                    <li><a href="https://github.com/slimphp/slim" target="_blank" rel="nofollow">Github</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper docs">
+        <div class="container-fluid">
+            <header class="site-header">
+                <div class="site-title"><a href="/">Slim</a></div>
+                <div class="site-slogan">一款 PHP 微框架</div>
+            </header>
+
+            <div class="row">
+                <div class="col-md-3">
+
+                    <h3 class="toc-title">开始使用</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs">文档首页</a></li>
+
+                        <li><a href="/docs/start/installation.html">安装</a></li>
+
+                        <li><a href="/docs/start/upgrade.html">升级指南</a></li>
+
+                        <li><a href="/docs/start/web-servers.html">Web 服务器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">教程</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/tutorial/first-app.html">造一款 Slim 应用</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">概念</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/concepts/value-objects.html">PSR 7</a></li>
+
+                        <li><a href="/docs/concepts/middleware.html">中间件</a></li>
+
+                        <li><a href="/docs/concepts/di.html">依赖容器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">The Application</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/application.html">概述</a></li>
+
+                        <li><a href="/docs/objects/application.html#application-configuration">配置</a></li>
+
+                        <li><a href="/docs/objects/application.html#slim-default-settings">默认设置</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">请求</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/request.html">概述</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-method">方法</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-headers">方法</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-body">体</a></li>
+
+                        <li><a href="/docs/objects/request.html#request-helpers">助手</a></li>
+
+                        <li><a href="/docs/objects/request.html#route-object">路由对象</a></li>
+
+                        <li><a href="/docs/objects/request.html#media-type-parsers">媒体类型解析器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">响应</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/response.html">概述</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-status">状态</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-headers">头</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-body">体</a></li>
+
+                        <li><a href="/docs/objects/response.html#returning-json">JSON</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">路由</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/router.html">概述</a></li>
+
+                        <li><a href="/docs/objects/router.html#how-to-create-routes">创建路由</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-callbacks">回调</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-strategies">策略</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-placeholders">占位符</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-names">名称</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-groups">组</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-middleware">中间件</a></li>
+
+                        <li><a href="/docs/objects/router.html#container-resolution">容器识别</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">错误处理</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/handlers/error.html">错误处理器</a></li>
+
+                        <li><a href="/docs/handlers/not-found.html">404 Not Found</a></li>
+
+                        <li><a href="/docs/handlers/not-allowed.html">405 Not Allowed</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">烹饪书</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/cookbook/route-patterns.html">以 / 结尾的路由</a></li>
+
+                        <li><a href="/docs/cookbook/ip-address.html">检索 IP 地址</a></li>
+
+                        <li><a href="/docs/cookbook/retrieving-current-route.html">检索当前路由</a></li>
+
+                        <li><a href="/docs/cookbook/database-eloquent.html">在 Slim 中使用 Eloquent</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">附加组件</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/features/templates.html">模版</a></li>
+
+                        <li><a href="/docs/features/caching.html">HTTP 缓存</a></li>
+
+                        <li><a href="/docs/features/csrf.html">CSRF 保护</a></li>
+
+                        <li><a href="/docs/features/flash.html">Flash Messages</a></li>
+
+                        <li><a href="https://github.com/slimphp/Slim/wiki/Middleware-for-Slim-Framework-v3.x" target="_blank">第三方组件</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-8 docs-content">
+                    <h1 class="page-header">HTTP 响应</h1>
+                    <p>Slim 应用程序的路由和中间件给出了一个 PSR 7 响应对象，它表示当前的 HTTP 响应将被返回给客户端。该响应对象遵循 <a href="http://www.php-fig.org/psr/psr-7/#3-2-1-psr-http-message-responseinterface">PSR 7 响应接口</a>实现，因此你可以检查和操作该 HTTP 响应的状态、响应头和响应体。</p>
+
+                    <h2 id="how-to-get-the-response-object">如何获取 HTTP 响应对象</h2>
+
+                    <p>PSR 7 响应对象作为路由回调的第二个参数注入到 Slim 应用程序的路由中：</p>
+
+                    <figure>
+
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">use</span> <span class="nx">Psr\Http\Message\ServerRequestInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Psr\Http\Message\ResponseInterface</span><span class="p">;</span>
+
+<span class="nv">$app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Slim\App</span><span class="p">;</span>
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'/foo'</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nx">ServerRequestInterface</span> <span class="nv">$request</span><span class="p">,</span> <span class="nx">ResponseInterface</span> <span class="nv">$response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Use the PSR 7 $response object
+</span>
+    <span class="k">return</span> <span class="nv">$response</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">();</span></code></pre></figure>
+
+                        <figcaption>Figure 1: Inject PSR 7 response into application route callback.</figcaption>
+                    </figure>
+
+                    <p>PSR 7 请求对象作为中间件 callable 的第二个参数注入到 Slim 应用程序的<em>中间件</em>：</p>
+
+                    <figure>
+
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">use</span> <span class="nx">Psr\Http\Message\ServerRequestInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Psr\Http\Message\ResponseInterface</span><span class="p">;</span>
+
+<span class="nv">$app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Slim\App</span><span class="p">;</span>
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="k">function</span> <span class="p">(</span><span class="nx">ServerRequestInterface</span> <span class="nv">$request</span><span class="p">,</span> <span class="nx">ResponseInterface</span> <span class="nv">$response</span><span class="p">,</span> <span class="nx">callable</span> <span class="nv">$next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Use the PSR 7 $response object
+</span>
+    <span class="k">return</span> <span class="nv">$next</span><span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">// Define app routes...
+</span><span class="nv">$app</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">();</span></code></pre></figure>
+
+                        <figcaption>Figure 2: Inject PSR 7 response into application middleware.</figcaption>
+                    </figure>
+
+                    <h2 id="the-response-status">HTTP 响应状态</h2>
+
+                    <p>每个 HTTP 响应都有一个数字 <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">状态编码</a>。状态编码用于识别返回客户端的 HTTP 响应的<em>类型</em>。PSR 7 响应对象的默认状态编码是 <code>200</code> (OK)。你可以像这样使用 <code>getStatusCode()</code> 方法获取 PSR 7 响应对象的状态编码：</p>
+
+                    <figure>
+
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php">$status = $response-&gt;getStatusCode();</code></pre></figure>
+
+                        <figcaption>Figure 3: Get response status code.</figcaption>
+                    </figure>
+
+                    <p>你可以拷贝一个 PSR 7 响应对象，并指定一个新的状态编码，像这样：</p>
+
+                    <figure>
+
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php">$newResponse = $response-&gt;withStatus(302);</code></pre></figure>
+
+                        <figcaption>Figure 4: Create response with new status code.</figcaption>
+                    </figure>
+
+                    <h2 id="the-response-headers">HTTP 响应头</h2>
+
+                    <p>每个 HTTP 响应都有其相应的响应头。这些元数据描述了 HTTP 响应，但在响应体中不可见。Slim 的 PSR 7 响应对象提供了几种检查和操作响应头的方法。</p>
+
+                    <h3 id="get-all-headers">获取所有响应头</h3>
+
+                    <p>使用 PSR 7 响应对象的 <code>getHeaders()</code> 方法提取所有 HTTP 响应头并存入一个关联数组中。该关联数组的键名即为响应头的名称，键值是与其响应头对应的值的字符串数组。</p>
+
+                    <figure>
+
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php">$headers = $response-&gt;getHeaders();
+foreach ($headers as $name =&gt; $values) {
+    echo $name . ": " . implode(", ", $values);
+}</code></pre></figure>
+
+                        <figcaption>Figure 5: Fetch and iterate all HTTP response headers as an associative array.</figcaption>
+                    </figure>
+
+                    <h3 id="get-one-header">获取单个响应头</h3>
+
+                    <p>使用 PSR 7 响应对象的 <code>getHeader($name)</code> 方法获取单个响应头的值。它将返回指定响应头的值组成的数组。记住，单个 HTTP 响应不止一个值。</p>
+
+                    <figure>
+
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php">$headerValueArray = $response-&gt;getHeader('Vary');</code></pre></figure>
+
+                        <figcaption>Figure 6: Get values for a specific HTTP header.</figcaption>
+                    </figure>
+
+                    <p>同样，可以是 PSR 7 响应对象的 <code>getHeaderLine($name)</code> 方法获取指定响应头的所有值，由逗号隔开。不同于
+                        <code>getHeader($name)</code> 方法，此方法返回的是由逗号隔开的字符串。</p>
+
+                    <figure>
+
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php">$headerValueString = $response-&gt;getHeaderLine('Vary');</code></pre></figure>
+
+                        <figcaption>Figure 7: Get single header's values as comma-separated string.</figcaption>
+                    </figure>
+
+                    <h3 id="detect-header">检查响应头</h3>
+
+                    <p>使用 PSR 7 响应对象的 <code>hasHeader($name)</code> 方法检查响应头存在与否。</p>
+
+                    <figure>
+
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php">if ($response-&gt;hasHeader('Vary')) {
+    // Do something
+}</code></pre></figure>
+
+                        <figcaption>Figure 8: Detect presence of a specific HTTP header.</figcaption>
+                    </figure>
+
+                    <h3 id="set-header">设置响应头</h3>
+
+                    <p>使用 PSR 7 响应对象的 <code>withHeader($name, $value)</code> 方法设置响应头的值。</p>
+
+                    <figure>
+
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php">$newResponse = $oldResponse-&gt;withHeader('Content-type', 'application/json');</code></pre></figure>
+
+                        <figcaption>Figure 9: Set HTTP header</figcaption>
+                    </figure>
+
+                    <div class="alert alert-info">
+                        <div><strong>提示</strong></div>
+                        <div>
+                            响应对象是不可改的。此方法返回一个响应对象的<em>拷贝（copy）</em>，它拥有新的值。<strong>此方法是破坏性的</strong>，它替换了已有的同名响应头现有的值。
+                        </div>
+                    </div>
+
+                    <h3 id="append-header">追加响应头/Append Header</h3>
+
+                    <p>使用 PSR 7 响应对象的 <code class="highlighter-rouge">withAddedHeader($name, $value)</code> 方法追加一个响应头的值。</p>
+
+                    <figure>
+
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php">$newResponse = $oldResponse-&gt;withAddedHeader('Allow', 'PUT');</code></pre></figure>
+
+                        <figcaption>Figure 10: Append HTTP header</figcaption>
+                    </figure>
+
+                    <div class="alert alert-info">
+                        <div><strong>提示</strong></div>
+                        <div>
+                            不同于 <code>withHeader()</code> 方法，此方法是<em>追加（append）</em>新的值到响应头已有的值中。该响应对象是不可修改的。此方法返回一个已添加新值的该对象的<em>拷贝</em>。
+                        </div>
+                    </div>
+
+                    <h3 id="remove-header">移除响应头</h3>
+
+                    <p>使用 HTTP 响应对象的 <code>withoutHeader($name)</code> 方法移除响应头。</p>
+
+                    <figure>
+
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php">$newResponse = $oldResponse-&gt;withoutHeader('Allow');</code></pre></figure>
+
+                        <figcaption>Figure 11: Remove HTTP header</figcaption>
+                    </figure>
+
+                    <div class="alert alert-info">
+                        <div><strong>提示</strong></div>
+                        <div>
+                            响应对象是不可改的。此方法返回一个带有追加的响应头的值的响应对象的<em>拷贝（copy）</em>。  
+                        </div>
+                    </div>
+
+                    <h2 id="the-response-body">HTTP 响应体</h2>
+
+                    <p>HTTP 响应通常有一个响应体。Slim 提供了一个 PSR 7 响应对象，你可以用它检查或操作可能会有的响应体。</p>
+
+                    <p>类似 PSR 7 请求对象，PSR 7 响应对象将响应体作为<code>\Psr\Http\Message\StreamInterface</code> 的实例来实现。你可以使用 PSR 7 响应对象的 <code>getBody()</code> 方法来获取 HTTP 响应体 <code>StreamInterface</code> 的实例。该 <code>getBody()</code> 方法完美适用于未知大小或对于可用内容来说太大的输出（outgoing） HTTP 响应。</p>
+
+                    <figure>
+
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php">$body = $response-&gt;getBody();</code></pre></figure>
+
+                        <figcaption>Figure 12: Get HTTP response body</figcaption>
+                    </figure>
+
+                    <p>所得的 <code>\Psr\Http\Message\StreamInterface</code> 实例提供以下方法来读取、迭代、写入到潜在的 PHP<code>资源（resource）</code>。</p>
+
+                    <ul>
+                        <li><code class="highlighter-rouge">getSize()</code></li>
+                        <li><code class="highlighter-rouge">tell()</code></li>
+                        <li><code class="highlighter-rouge">eof()</code></li>
+                        <li><code class="highlighter-rouge">isSeekable()</code></li>
+                        <li><code class="highlighter-rouge">seek()</code></li>
+                        <li><code class="highlighter-rouge">rewind()</code></li>
+                        <li><code class="highlighter-rouge">isWritable()</code></li>
+                        <li><code class="highlighter-rouge">write($string)</code></li>
+                        <li><code class="highlighter-rouge">isReadable()</code></li>
+                        <li><code class="highlighter-rouge">read($length)</code></li>
+                        <li><code class="highlighter-rouge">getContents()</code></li>
+                        <li><code class="highlighter-rouge">getMetadata($key = null)</code></li>
+                    </ul>
+
+                    <p>大多数情况下，你会需要写入到 PSR 7 响应对象。你可以像这样使用 <code>write()</code> 方法将内容写入到 <code>StreamInterface</code> 实例：</p>
+
+                    <figure>
+
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php">$body = $response-&gt;getBody();
+$body-&gt;write('Hello');</code></pre></figure>
+
+                        <figcaption>Figure 13: Write content to the HTTP response body</figcaption>
+                    </figure>
+
+                    <p>你同样可以完整新建一个 <code>StreamInterface</code> 实例来<em>替换</em> PSR 7 响应对象的响应体。这玩意特别有用，尤其是你想要从远程地址传输内容到 HTTP 响应中时（例如，文件系统或远程API）。你可以使用 <code>withBody(StreamInterface $body)</code> 方法替换 PSR 7 响应对象的响应体。它的参数<strong>必须</strong>是 <code>\Psr\Http\Message\StreamInterface</code> 的实例。</p>
+
+                    <figure>
+
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php">$newStream = new \GuzzleHttp\Psr7\LazyOpenStream('/path/to/file', 'r');
+$newResponse = $oldResponse-&gt;withBody($newStream);</code></pre></figure>
+
+                        <figcaption>Figure 14: Replace the HTTP response body</figcaption>
+                    </figure>
+
+                    <div class="alert alert-info">
+                        <div><strong>提示</strong></div>
+                        <div>
+                            响应对象不可改变。这个方法返回的是包含新响应体的对象的<em>拷贝（copy）</em>。
+                        </div>
+                    </div>
+
+                    <h2 id="returning-json">返回 JSON</h2>
+
+                    <p>Slim 的响应对象拥有一个自定义方法 <code class="highlighter-rouge">withJson($data, $status, $encodingOptions)</code> 来帮助优化返回 JSON 数据的过程。</p>
+
+                    <p>其中 <code class="highlighter-rouge">$data</code> 参数包含你希望返回的 JSON 的数据结构。<code class="highlighter-rouge">$status</code> 是可选的，并能返回一个自定义的 HTTP 代码。<code class="highlighter-rouge">$encodingOptions</code> 是可选的，它是与<a href="http://php.net/manual/en/function.json-encode.php"><code class="highlighter-rouge">json_encode()</code></a> 相同的编码选项。</p>
+
+                    <p>最简单的形式，可以返回带默认的 200 HTTP 状态代码的 JSON 数据。</p>
+
+                    <figure>
+
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php">$data = array('name' =&gt; 'Bob', 'age' =&gt; 40);
+$newResponse = $oldResponse-&gt;withJson($data);</code></pre></figure>
+
+                        <figcaption>Figure 15: Returning JSON with a 200 HTTP status code.</figcaption>
+                    </figure>
+
+                    <p>还可以返回带有自定义 HTTP 状态码的 JSON 数据。</p>
+
+                    <figure>
+
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php">$data = array('name' =&gt; 'Rob', 'age' =&gt; 40);
+$newResponse = $oldResponse-&gt;withJson($data, 201);</code></pre></figure>
+
+                        <figcaption>Figure 16: Returning JSON with a 201 HTTP status code.</figcaption>
+                    </figure>
+
+                    <p>HTTP 响应的 <code class="highlighter-rouge">Content-Type</code> 自动设置为 <code class="highlighter-rouge">application/json;charset=utf-8</code>。</p>
+
+                    <p>如果 JSON 存在数据编码问题，<code class="highlighter-rouge">\RuntimeException($message, $code)</code>将抛出异常，包含将 <a href="http://php.net/manual/en/function.json-last-error-msg.php"><code class="highlighter-rouge">json_last_error_msg()</code></a> 的值作为 <code class="highlighter-rouge">$message</code>的值以及将 <a href="http://php.net/manual/en/function.json-last-error.php"><code class="highlighter-rouge">json_last_error()</code></a> 作为 the <code class="highlighter-rouge">$code</code>的值。</p>
+
+                    <div class="alert alert-info">
+                        <div><strong>提示</strong></div>
+                        <div>
+                            响应对象是不可改的。此方法返回一个响应对象的<em>拷贝（copy）</em>，该拷贝带有新的 Content-Type 头。<strong>该方法是毁灭性的</strong>，它将<em>替换（replaces）</em>已存在的 Content-Type 头。当 <code>withJson()</code> 被调用，如果传递了 $status ，HTTP 状态码也会被替换。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="site-footer">
+                <p>
+                    Created and maintained by
+                    <br/>
+                    <a href="http://joshlockhart.com">Josh Lockhart</a>,
+                    <a href="http://www.silentworks.co.uk" target="_blank">Andrew Smith</a>,
+                    <a href="http://akrabat.com/" target="_blank">Rob Allen</a>, and the
+                    <a href="https://github.com/orgs/slimphp/people" target="_blank">Slim Framework Team</a>
+                </p>
+                <p>中文文档由<a href="http://slimphp.net">SlimPHP中文网</a>整理翻译</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/assets/scripts/build/production.min.js"></script>
+</body>
+
+</html>

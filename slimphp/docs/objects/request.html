@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>HTTP 请求 - SlimPHP中文网</title>
+    <meta name="description" content="" />
+    <meta name="author" content="SlimPHP中文网">
+    <meta name="keywords" content="">
+    <!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script><![endif]-->
+    <link rel="stylesheet" href="/assets/css/all.css" />
+    <link rel="shortcut icon" href="/assets/images/favicon.png" />
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+</head>
+
+<body style="padding-top: 5em">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img src="/assets/images/favicon.png" height="24px" alt="Slim" /></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/components">组件</a></li>
+                    <li class="active"><a href="/docs">文档</a></li>
+                    <li><a href="https://segmentfault.com/t/slim" target="_blank" rel="nofollow">讨论</a></li>
+                    <li><a href="https://github.com/slimphp/slim" target="_blank" rel="nofollow">Github</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper docs">
+        <div class="container-fluid">
+            <header class="site-header">
+                <div class="site-title"><a href="/">Slim</a></div>
+                <div class="site-slogan">一款 PHP 微框架</div>
+            </header>
+
+            <div class="row">
+                <div class="col-md-3">
+
+                    <h3 class="toc-title">开始使用</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs">文档首页</a></li>
+
+                        <li><a href="/docs/start/installation.html">安装</a></li>
+
+                        <li><a href="/docs/start/upgrade.html">升级指南</a></li>
+
+                        <li><a href="/docs/start/web-servers.html">Web 服务器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">教程</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/tutorial/first-app.html">造一款 Slim 应用</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">概念</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/concepts/value-objects.html">PSR 7</a></li>
+
+                        <li><a href="/docs/concepts/middleware.html">中间件</a></li>
+
+                        <li><a href="/docs/concepts/di.html">依赖容器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">The Application</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/application.html">概述</a></li>
+
+                        <li><a href="/docs/objects/application.html#application-configuration">配置</a></li>
+
+                        <li><a href="/docs/objects/application.html#slim-default-settings">默认设置</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">请求</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/request.html">概述</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-method">方法</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-headers">方法</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-body">体</a></li>
+
+                        <li><a href="/docs/objects/request.html#request-helpers">助手</a></li>
+
+                        <li><a href="/docs/objects/request.html#route-object">路由对象</a></li>
+
+                        <li><a href="/docs/objects/request.html#media-type-parsers">媒体类型解析器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">响应</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/response.html">概述</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-status">状态</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-headers">头</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-body">体</a></li>
+
+                        <li><a href="/docs/objects/response.html#returning-json">JSON</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">路由</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/router.html">概述</a></li>
+
+                        <li><a href="/docs/objects/router.html#how-to-create-routes">创建路由</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-callbacks">回调</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-strategies">策略</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-placeholders">占位符</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-names">名称</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-groups">组</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-middleware">中间件</a></li>
+
+                        <li><a href="/docs/objects/router.html#container-resolution">容器识别</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">错误处理</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/handlers/error.html">错误处理器</a></li>
+
+                        <li><a href="/docs/handlers/not-found.html">404 Not Found</a></li>
+
+                        <li><a href="/docs/handlers/not-allowed.html">405 Not Allowed</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">烹饪书</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/cookbook/route-patterns.html">以 / 结尾的路由</a></li>
+
+                        <li><a href="/docs/cookbook/ip-address.html">检索 IP 地址</a></li>
+
+                        <li><a href="/docs/cookbook/retrieving-current-route.html">检索当前路由</a></li>
+
+                        <li><a href="/docs/cookbook/database-eloquent.html">在 Slim 中使用 Eloquent</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">附加组件</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/features/templates.html">模版</a></li>
+
+                        <li><a href="/docs/features/caching.html">HTTP 缓存</a></li>
+
+                        <li><a href="/docs/features/csrf.html">CSRF 保护</a></li>
+
+                        <li><a href="/docs/features/flash.html">Flash Messages</a></li>
+
+                        <li><a href="https://github.com/slimphp/Slim/wiki/Middleware-for-Slim-Framework-v3.x" target="_blank">第三方组件</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-8 docs-content">
+                    <h1 class="page-header">HTTP 请求</h1>
+                    <p>Slim 应用程序的路由和中间件给出了一个 PSR 7 请求对象，它表示当前的 HTTP 请求是由 Web 服务器 接收到的。该请求对象遵循 <a href="http://www.php-fig.org/psr/psr-7/#3-2-1-psr-http-message-serverrequestinterface">PSR 7 服务器请求接口（ServerRequestInterface ）</a> 实现，因此你可以检查和操作该 HTTP 请求对象的方法、头和体。</p>
+
+                    <h2 id="how-to-get-the-request-object">如何获取请求对象</h2>
+
+                    <p>该 PSR 7 请求对象作为路由回调的第一个参数注入到你的 Slim 应用程序的路由中，像这样：</p>
+
+                    <figure>
+
+                        <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">use</span> <span class="nx">Psr\Http\Message\ServerRequestInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Psr\Http\Message\ResponseInterface</span><span class="p">;</span>
+
+<span class="nv">$app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Slim\App</span><span class="p">;</span>
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/foo&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nx">ServerRequestInterface</span> <span class="nv">$request</span><span class="p">,</span> <span class="nx">ResponseInterface</span> <span class="nv">$response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 使用 PSR 7 $request 对象</span>
+
+    <span class="k">return</span> <span class="nv">$response</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">();</span></code></pre></div>
+
+                        <figcaption>Figure 1: 将 PSR 7 请求注入到应用程序的路由回调中。</figcaption>
+                    </figure>
+
+                    <p>该 PSR 7 请求对象作为中间件 callable 的第一个参数注入到 Slim 应用程序的<em>中间件</em>中，像这样：</p>
+
+                    <figure>
+
+                        <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">use</span> <span class="nx">Psr\Http\Message\ServerRequestInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Psr\Http\Message\ResponseInterface</span><span class="p">;</span>
+
+<span class="nv">$app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Slim\App</span><span class="p">;</span>
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="k">function</span> <span class="p">(</span><span class="nx">ServerRequestInterface</span> <span class="nv">$request</span><span class="p">,</span> <span class="nx">ResponseInterface</span> <span class="nv">$response</span><span class="p">,</span> <span class="nx">callable</span> <span class="nv">$next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Use the PSR 7 $request object</span>
+
+    <span class="k">return</span> <span class="nv">$next</span><span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">// Define app routes...</span>
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">();</span></code></pre></div>
+
+                        <figcaption>Figure 2: 注入 PSR 7 请求到应用程序中间件</figcaption>
+                    </figure>
+
+                    <h2 id="the-request-method">请求的方法</h2>
+
+                    <p>每个 HTTP 请求都有相应的方法，通常是这些中的一个：</p>
+
+                    <ul>
+                        <li>GET</li>
+                        <li>POST</li>
+                        <li>PUT</li>
+                        <li>DELETE</li>
+                        <li>HEAD</li>
+                        <li>PATCH</li>
+                        <li>OPTIONS</li>
+                    </ul>
+
+                    <p>你可以恰当地使用 <code>getMethod()</code> 请求对象方法来检查 HTTP 请求方法。</p>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$method = $request-&gt;getMethod();</span></code></pre></div>
+
+                    <p>由于这是一个常见的功能，Slim 的内置 PSR 7 实现方法也提供了这些专有方法，它们返回
+                        <code>true</code> 或 <code>false</code> 。</p>
+
+                    <ul>
+                        <li><code>$request-&gt;isGet()</code></li>
+                        <li><code>$request-&gt;isPost()</code></li>
+                        <li><code>$request-&gt;isPut()</code></li>
+                        <li><code>$request-&gt;isDelete()</code></li>
+                        <li><code>$request-&gt;isHead()</code></li>
+                        <li><code>$request-&gt;isPatch()</code></li>
+                        <li><code>$request-&gt;isOptions()</code></li>
+                    </ul>
+
+                    <p>还可以伪造或<em>覆写</em>这些 HTTP 请求方法。这非常有用，例如你需要在一个只支持 <code>GET</code> 或 <code>POST</code> 请求的传统浏览器中模拟一个 <code>PUT</code> 请求。</p>
+
+                    <p>有两种方法来覆写 HTTP 请求方法。你可以在一个 <code>POST</code> 请求体中引入（include）一个
+                        <code>_METHOD</code> 参数。该 HTTP 请求必须使用
+                        <code>application/x-www-form-urlencoded</code> 内容类型（content type）。</p>
+
+                    <figure>
+
+                        <div class="highlight"><pre><code class="language-text" data-lang="text">POST /path HTTP/1.1
+Host: example.com
+Content-type: application/x-www-form-urlencoded
+Content-length: 22
+
+data=value&amp;_METHOD=PUT</code></pre></div>
+
+                        <figcaption>Figure 3: 使用 _METHOD 参数覆写 HTTP 请求。</figcaption>
+                    </figure>
+
+                    <p>你也可以使用自定义的 <code>X-Http-Method-Override</code> HTTP请求头来覆写 HTTP 请求方法。这个方式可以用于任意 HTTP 请求内容类型（content type）。</p>
+
+                    <figure>
+
+                        <div class="highlight"><pre><code class="language-text" data-lang="text">POST /path HTTP/1.1
+Host: example.com
+Content-type: application/json
+Content-length: 16
+X-Http-Method-Override: PUT
+
+{&quot;data&quot;:&quot;value&quot;}</code></pre></div>
+
+                        <figcaption>Figure 4: 使用 X-Http-Method-Override 请求头覆写 HTTP 方法。</figcaption>
+                    </figure>
+
+                    <p>你可以使用 PSR 7 请求对象的方法 <code>getOriginalMethod()</code> 来提取<em>原有</em> （不是覆写后的）的 HTTP 方法。</p>
+
+                    <h2 id="the-request-uri">请求 URI</h2>
+
+                    <p>每个 HTTP 请求都有一个识别被请求的应用程序资源的 URI 。HTTP 请求 URI 分为这几部分：</p>
+
+                    <ul>
+                        <li>Scheme (e.g. <code>http</code> or <code>https</code>)</li>
+                        <li>Host (e.g. <code>example.com</code>)</li>
+                        <li>Port (e.g. <code>80</code> or <code>443</code>)</li>
+                        <li>Path (e.g. <code>/users/1</code>)</li>
+                        <li>Query string (e.g. <code>sort=created&amp;dir=asc</code>)</li>
+                    </ul>
+
+                    <p>你可以使用 <code>getUri()</code> 方法来提取 PSR 7 请求对象的 URI ：</p>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$uri = $request-&gt;getUri();</span></code></pre></div>
+
+                    <p>PSR 7 请求对象的 URI 本身就是一个对象，提供了以下方法来检查 HTTP 请求的 URL ：</p>
+
+                    <ul>
+                        <li><code class="highlighter-rouge">getScheme()</code></li>
+                        <li><code class="highlighter-rouge">getAuthority()</code></li>
+                        <li><code class="highlighter-rouge">getUserInfo()</code></li>
+                        <li><code class="highlighter-rouge">getHost()</code></li>
+                        <li><code class="highlighter-rouge">getPort()</code></li>
+                        <li><code class="highlighter-rouge">getPath()</code></li>
+                        <li><code class="highlighter-rouge">getBasePath()</code></li>
+                        <li><code class="highlighter-rouge">getQuery()</code> <small>(返回整个查询字符串，e.g. <code class="highlighter-rouge">a=1&amp;b=2</code>)</small></li>
+                        <li><code class="highlighter-rouge">getFragment()</code></li>
+                        <li><code class="highlighter-rouge">getBaseUrl()</code></li>
+                    </ul>
+
+                    <div class="alert alert-info">
+                        <div><strong>基准路径</strong></div>
+                        如果你的 Slim 应用程序的前端控制器放置在文件根目录的物理子目录中，你可以使用 URI 对象的 <code>getBasePath()</code> 方法来提取 HTTP 请求的物理基准路径（相对于文件根目录）。如果 Slim 应用程序安装在文件根目录的最上层目录中，它将返回一个空字符串。
+                    </div>
+
+                    <h2 id="the-request-headers">请求头</h2>
+
+                    <p>每个 HTTP 请求都有请求头。这些元数据描述了 HTTP 请求，但在请求体中不可见。Slim 的 PSR 7 请求对象提供了几个检查请求头的方法。</p>
+
+                    <h3 id="get-all-headers">获取所有请求头</h3>
+
+                    <p>使用 PSR 7 请求对象的<code>getHeaders()</code>方法提取所有 HTTP 请求头并放入一个关联数组中。此关联数组的键值是请求头的名称，其值是各请求头对应的由字符串值组成的数值数组。</p>
+
+                    <figure>
+
+                        <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$headers = $request-&gt;getHeaders();</span>
+<span class="x">foreach ($headers as $name =&gt; $values) {</span>
+<span class="x">    echo $name . &quot;: &quot; . implode(&quot;, &quot;, $values);</span>
+<span class="x">}</span></code></pre></div>
+
+                        <figcaption>Figure 5: 提取并迭代所有 HTTP 请求头作为一个关联数组。</figcaption>
+                    </figure>
+
+                    <h3 id="get-one-header">获取单个请求头</h3>
+
+                    <p>你可以使用 PSR 7 请求对象的 <code>getHeader($name)</code> 方法获取一个单独的请求头的值。它将返回一个由指定请求头名称对应的值组成的数组。记住，单独的请求头可不一定只有一个值。</p>
+
+                    <figure>
+
+                        <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$headerValueArray = $request-&gt;getHeader(&#39;Accept&#39;);</span></code></pre></div>
+
+                        <figcaption>Figure 6: 获取指定 HTTP 请求的值。</figcaption>
+                    </figure>
+
+                    <p>你同样可以使用 PSR 7 请求对象的 <code>getHeaderLine($name)</code> 方法提取指定请求头的值，并以逗号分隔。这不同于
+                        <code>getHeader($name)</code> 方法，这个方法返回一个由逗号分隔的字符串。</p>
+
+                    <figure>
+
+                        <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$headerValueString = $request-&gt;getHeaderLine(&#39;Accept&#39;);</span></code></pre></div>
+
+                        <figcaption>Figure 7: 获取单个请求头的值，返回逗号分隔的字符串。</figcaption>
+                    </figure>
+
+                    <h3 id="detect-header">检测请求头</h3>
+
+                    <p>使用 PSR 7 请求对象的 <code>hasHeader($name)</code> 方法检查某请求头是否存在。</p>
+
+                    <figure>
+
+                        <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">if ($request-&gt;hasHeader(&#39;Accept&#39;)) {</span>
+<span class="x">    // Do something</span>
+<span class="x">}</span></code></pre></div>
+
+                        <figcaption>Figure 8: Detect presence of a specific HTTP request header.</figcaption>
+                    </figure>
+
+                    <h2 id="the-request-body">请求体</h2>
+
+                    <p>每个 HTTP 请求都有一个请求体。如果你的 Slim 应用程序是通过 JSON 或 XML 数据进行通信的，你可以使用 PSR 7 请求对象的
+                        <code>getParsedBody()</code> 方法将 HTTP 请求体解析成原生 PHP 格式。Slim 可以解析 JSON, XML, 和 URL-encoded 数据，开箱即用。</p>
+
+                    <figure>
+
+                        <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$parsedBody = $request-&gt;getParsedBody();</span></code></pre></div>
+
+                        <figcaption>Figure 9: Parse HTTP request body into native PHP format</figcaption>
+                    </figure>
+
+                    <ul>
+                        <li>JSON 请求通过 <code>json_decode($input)</code> 转换成 PHP 对象。</li>
+                        <li>XML 请求通过 <code>simplexml_load_string($input)</code> 转换成 <code>SimpleXMLElement</code> 。</li>
+                        <li>URL-encoded 请求通过 <code>parse_str($input)</code> 转换成 PHP 数组。</li>
+                    </ul>
+
+                    <p>从技术上说，Slim 的 PSR 7 请求对象将 HTTP 请求体表示为 <code>\Psr\Http\Message\StreamInterface</code> 的一个实例。你可以通过使用 PSR 7 请求对象的 <code>getBody()</code> 方法获取 HTTP 请求体的 <code>StreamInterface</code> 实例。该 <code>getBody()</code> 方法在处理未知大小或对于可用内存来说太大的 HTTP 请求时，是个很好的方法。</p>
+
+                    <figure>
+
+                        <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$body = $request-&gt;getBody();</span></code></pre></div>
+
+                        <figcaption>Figure 10: 获取 HTTP 请求体</figcaption>
+                    </figure>
+
+                    <p>生成的 <code>\Psr\Http\Message\StreamInterface</code> 实例提供了以下方法来读取或迭代未知的 <code>资源（resource）</code>。</p>
+
+                    <ul>
+                        <li><code>getSize()</code></li>
+                        <li><code>tell()</code></li>
+                        <li><code>eof()</code></li>
+                        <li><code>isSeekable()</code></li>
+                        <li><code>seek()</code></li>
+                        <li><code>rewind()</code></li>
+                        <li><code>isWritable()</code></li>
+                        <li><code>write($string)</code></li>
+                        <li><code>isReadable()</code></li>
+                        <li><code>read($length)</code></li>
+                        <li><code>getContents()</code></li>
+                        <li><code>getMetadata($key = null)</code></li>
+                    </ul>
+
+                    <h2 id="request-helpers">请求助手/Request Helpers</h2>
+
+                    <p>Slim 的 PSR 7 请求实现方法提供了额外的专有方法来帮助你进一步检查 HTTP 请求。</p>
+
+                    <h3 id="detect-xhr-requests">检测 XHR 请求</h3>
+
+                    <p>你可以使用请求对象的 <code>isXhr()</code> 方法来检测 XHR 请求。该方法检测 <code>X-Requested-With</code> 请求头，并确保它的值是 <code>XMLHttpRequest</code>。</p>
+
+                    <figure>
+
+                        <div class="highlight"><pre><code class="language-text" data-lang="text">POST /path HTTP/1.1
+Host: example.com
+Content-type: application/x-www-form-urlencoded
+Content-length: 7
+X-Requested-With: XMLHttpRequest
+
+foo=bar</code></pre></div>
+
+                        <figcaption>Figure 11: XHR 请求示例.</figcaption>
+                    </figure>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">if ($request-&gt;isXhr()) {</span>
+<span class="x">    // Do something</span>
+<span class="x">}</span></code></pre></div>
+
+                    <h3 id="content-type">内容类型/Content Type</h3>
+
+                    <p>你可以使用请求对象的 <code>getContentType()</code> 方法提取 HTTP 请求的内容类型。它将通过 HTTP 客户端返回 <code>Content-Type</code> 头的完整值。</p>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$contentType = $request-&gt;getContentType();</span></code></pre></div>
+
+                    <h3 id="media-type">媒体类型/Media Type</h3>
+
+                    <p>你或许不会想要完整的 <code>Content-Type</code> 头。加入说你只想要媒体类型？你可以使用响应对象的 <code>getMediaType()</code>方法取得 HTTP 请求的媒体类型。</p>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$mediaType = $request-&gt;getMediaType();</span></code></pre></div>
+
+                    <p>可以使用请求对象的 <code>getMediaTypeParams()</code> 方法，以关联数组的形式获取附加的没提类型参数。</p>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$mediaParams = $request-&gt;getMediaTypeParams();</span></code></pre></div>
+
+                    <h3 id="character-set">字符集/Character Set</h3>
+
+                    <p>HTTP 请求字符集是最常用的媒体类型参数之一。请求对象提供了一个专用的方法来获取这个媒体类型参数。</p>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$charset = $request-&gt;getContentCharset();</span></code></pre></div>
+
+                    <h3 id="content-length">内容长度/Content Length</h3>
+
+                    <p>使用请求对象的 <code>getContentLength()</code> 方法获取 HTTP 请求的内容长度。</p>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$length = $request-&gt;getContentLength();</span></code></pre></div>
+
+                    <h3 id="route-object">路由对象/Route Object</h3>
+
+                    <p>有时在中间件中你需要路由的参数。</p>
+
+                    <p>在这个例子中，我们首先检查用户是否登录，然后检查用户有否有权限浏览他们正试图浏览的视频。</p>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$app-&gt;get(&#39;/course/{id}&#39;, Video::class.&quot;:watch&quot;)-&gt;add(Permission::class)-&gt;add(Auth::class);</span>
+
+<span class="x">    //.. In the Permission Class&#39;s Invoke</span>
+<span class="x">    /** @var $route \Slim\Route */</span>
+<span class="x">    $route = $request-&gt;getAttribute(&#39;route&#39;);</span>
+<span class="x">    $courseId = $route-&gt;getArgument(&#39;id&#39;);</span></code></pre></div>
+
+                    <h2 id="media-type-parsers">媒体类型解析</h2>
+
+                    <p>如果 HTTP 请求的媒体类型被识别，将通过 <code class="highlighter-rouge">$request-&gt;getParsedBody()</code> 解析成为结构化的可用数据。通常是解析成一个数组，或者是 XML 媒体类型的对象。</p>
+
+                    <p>以下媒体类型是可识别和解析的：</p>
+
+                    <ul>
+                        <li>application/x-www-form-urlencoded’</li>
+                        <li>application/json</li>
+                        <li>application/xml &amp; text/xml</li>
+                    </ul>
+
+                    <p>如果你想要用 Slim 来解析其它媒体类型，那么你可以自行解析原生的 HTTP 请求体，或者新注册一个媒体解析器。媒体解析器都是简单的 callable ，它接收一个 <code class="highlighter-rouge">$input</code> 字符串并返回一个解析后的对象或数组。</p>
+
+                    <p>在应用程序或者路由中间件中注册新的媒体解析器。注意，你必须在首次尝试访问解析后的 HTTP 请求体前注册该解析器。</p>
+
+                    <p>例如，要自动解析带有 <code class="highlighter-rouge">text/javascript</code> 内容类型的 JSON，你可以像这样在中间件中注册媒体解析器：</p>
+
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php">// 添加中间件
+$app-&gt;add(function ($request, $response, $next) {
+    // add media parser
+    $request-&gt;registerMediaTypeParser(
+        "text/javascript",
+        function ($input) {
+            return json_decode($input, true);
+        }
+    );
+    
+    return $next($request, $response);
+});</code></pre></figure>
+
+                </div>
+            </div>
+            <footer class="site-footer">
+                <p>
+                    Created and maintained by
+                    <br/>
+                    <a href="http://joshlockhart.com">Josh Lockhart</a>,
+                    <a href="http://www.silentworks.co.uk" target="_blank">Andrew Smith</a>,
+                    <a href="http://akrabat.com/" target="_blank">Rob Allen</a>, and the
+                    <a href="https://github.com/orgs/slimphp/people" target="_blank">Slim Framework Team</a>
+                </p>
+                <p>中文文档由<a href="http://slimphp.net">SlimPHP中文网</a>整理翻译</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/assets/scripts/build/production.min.js"></script>
+</body>
+
+</html>

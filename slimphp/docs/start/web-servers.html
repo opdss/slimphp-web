@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Web 服务器 - SlimPHP中文网</title>
+    <meta name="description" content="" />
+    <meta name="author" content="SlimPHP中文网">
+    <meta name="keywords" content="">
+    <!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script><![endif]-->
+    <link rel="stylesheet" href="/assets/css/all.css" />
+    <link rel="shortcut icon" href="/assets/images/favicon.png" />
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+</head>
+
+<body style="padding-top: 5em">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img src="/assets/images/favicon.png" height="24px" alt="Slim" /></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/components">组件</a></li>
+                    <li class="active"><a href="/docs">文档</a></li>
+                    <li><a href="https://segmentfault.com/t/slim" target="_blank" rel="nofollow">讨论</a></li>
+                    <li><a href="https://github.com/slimphp/slim" target="_blank" rel="nofollow">Github</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper docs">
+        <div class="container-fluid">
+            <header class="site-header">
+                <div class="site-title"><a href="/">Slim</a></div>
+                <div class="site-slogan">一款 PHP 微框架</div>
+            </header>
+
+            <div class="row">
+                <div class="col-md-3">
+
+                    <h3 class="toc-title">开始使用</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs">文档首页</a></li>
+
+                        <li><a href="/docs/start/installation.html">安装</a></li>
+
+                        <li><a href="/docs/start/upgrade.html">升级指南</a></li>
+
+                        <li><a href="/docs/start/web-servers.html">Web 服务器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">教程</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/tutorial/first-app.html">造一款 Slim 应用</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">概念</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/concepts/value-objects.html">PSR 7</a></li>
+
+                        <li><a href="/docs/concepts/middleware.html">中间件</a></li>
+
+                        <li><a href="/docs/concepts/di.html">依赖容器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">The Application</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/application.html">概述</a></li>
+
+                        <li><a href="/docs/objects/application.html#application-configuration">配置</a></li>
+
+                        <li><a href="/docs/objects/application.html#slim-default-settings">默认设置</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">请求</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/request.html">概述</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-method">方法</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-headers">方法</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-body">体</a></li>
+
+                        <li><a href="/docs/objects/request.html#request-helpers">助手</a></li>
+
+                        <li><a href="/docs/objects/request.html#route-object">路由对象</a></li>
+
+                        <li><a href="/docs/objects/request.html#media-type-parsers">媒体类型解析器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">响应</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/response.html">概述</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-status">状态</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-headers">头</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-body">体</a></li>
+
+                        <li><a href="/docs/objects/response.html#returning-json">JSON</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">路由</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/router.html">概述</a></li>
+
+                        <li><a href="/docs/objects/router.html#how-to-create-routes">创建路由</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-callbacks">回调</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-strategies">策略</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-placeholders">占位符</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-names">名称</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-groups">组</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-middleware">中间件</a></li>
+
+                        <li><a href="/docs/objects/router.html#container-resolution">容器识别</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">错误处理</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/handlers/error.html">错误处理器</a></li>
+
+                        <li><a href="/docs/handlers/not-found.html">404 Not Found</a></li>
+
+                        <li><a href="/docs/handlers/not-allowed.html">405 Not Allowed</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">烹饪书</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/cookbook/route-patterns.html">以 / 结尾的路由</a></li>
+
+                        <li><a href="/docs/cookbook/ip-address.html">检索 IP 地址</a></li>
+
+                        <li><a href="/docs/cookbook/retrieving-current-route.html">检索当前路由</a></li>
+
+                        <li><a href="/docs/cookbook/database-eloquent.html">在 Slim 中使用 Eloquent</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">附加组件</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/features/templates.html">模版</a></li>
+
+                        <li><a href="/docs/features/caching.html">HTTP 缓存</a></li>
+
+                        <li><a href="/docs/features/csrf.html">CSRF 保护</a></li>
+
+                        <li><a href="/docs/features/flash.html">Flash Messages</a></li>
+
+                        <li><a href="https://github.com/slimphp/Slim/wiki/Middleware-for-Slim-Framework-v3.x" target="_blank">第三方组件</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-8 docs-content">
+                <h1 class="page-header">Web 服务器</h1>
+                    <p>典型地使用前端控制器将 web 服务器接收到的 HTTP 请求汇集到一个单独的 PHP 文件。下面的文档说明了如何通知你的 web 服务器将接收到的 HTTP 请求发送到 PHP 前端控制器文件。</p>
+
+                    <h2 id="php-built-in-server">PHP built-in server</h2>
+
+                    <p>Run the following command in terminal to start localhost web server, assuming <code class="highlighter-rouge">./public/</code> is public-accessible directory with <code class="highlighter-rouge">index.php</code> file:</p>
+
+                    <figure class="highlight"><pre><code class="language-bash" data-lang="bash">php -S localhost:8080 -t ./public/ </code></pre></figure>
+
+                    <h2 id="apache-configuration">Apache 配置</h2>
+
+                    <p>确保 <code>.htaccess</code> 和 <code>index.php</code> 这两个文件位于同一个可公开访问的目录中。这个 <code>.htaccess</code> 文件应当包含以下代码：</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]</code></pre></div>
+
+<p>为了保证 <code>.htaccess</code> 的重写（rewrite）规则能正常生效，务必确保你的 Apache 虚拟主机开启了 <code>AllowOverride</code> 选项。</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">AllowOverride All</code></pre></div>
+
+<h2 id="nginx-configuration">Nginx 配置</h2>
+
+<p>这是一个例子，在 Nginx 虚拟主机上针对域名 <code>example.com</code> 的配置。它监听80端口上的入境（inbound）HTTP 连接。它假定一个PHP-FPM服务器在端口9000上运行。你需要将 <code>server_name</code>, <code>error_log</code>,
+<code>access_log</code>, 和 <code>root</code> 这些指令修改成你自己的值。其中 <code>root</code> 指令是你的应用程序公共文件根目录的路径；你的 Slim 应用的
+<code>index.php</code> 前端控制器文件应该放在这个目录中。</p>
+
+                    <figure class="highlight"><pre><code class="language-text" data-lang="text">server {
+    listen 80;
+    server_name example.com;
+    index index.php;
+    error_log /path/to/example.error.log;
+    access_log /path/to/example.access.log;
+    root /path/to/public;
+
+    location / {
+        try_files $uri $uri/ /index.php$is_args$args;
+    }
+
+    location ~ \.php {
+        try_files $uri =404;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param SCRIPT_NAME $fastcgi_script_name;
+        fastcgi_index index.php;
+        fastcgi_pass 127.0.0.1:9000;
+    }
+}</code></pre></figure>
+
+                    <h2 id="hiphop-virtual-machine">HipHop Virtual Machine</h2>
+
+                    <p>Your HipHop Virtual Machine configuration file should contain this code (along with other settings you may need). Be sure you change the <code class="highlighter-rouge">SourceRoot</code> setting to point to your Slim app’s document root directory.</p>
+
+                    <figure class="highlight"><pre><code class="language-text" data-lang="text">Server {
+    SourceRoot = /path/to/public/directory
+}
+
+ServerVariables {
+    SCRIPT_NAME = /index.php
+}
+
+VirtualHost {
+    * {
+        Pattern = .*
+        RewriteRules {
+                * {
+                        pattern = ^(.*)$
+                        to = index.php/$1
+                        qsa = true
+                }
+        }
+    }
+}</code></pre></figure>
+
+                    <h2 id="iis">IIS</h2>
+
+                    <p>务必确保 <code>Web.config</code> 和 <code>index.php</code> 这两个文件位于同一个可公开访问的目录中。 这个 <code>Web.config</code> 文件必须包含以下代码：</p>
+
+                    <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;system.webServer&gt;</span>
+        <span class="nt">&lt;rewrite&gt;</span>
+            <span class="nt">&lt;rules&gt;</span>
+                <span class="nt">&lt;rule</span> <span class="na">name=</span><span class="s">"slim"</span> <span class="na">patternSyntax=</span><span class="s">"Wildcard"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;match</span> <span class="na">url=</span><span class="s">"*"</span> <span class="nt">/&gt;</span>
+                    <span class="nt">&lt;conditions&gt;</span>
+                        <span class="nt">&lt;add</span> <span class="na">input=</span><span class="s">"{REQUEST_FILENAME}"</span> <span class="na">matchType=</span><span class="s">"IsFile"</span> <span class="na">negate=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+                        <span class="nt">&lt;add</span> <span class="na">input=</span><span class="s">"{REQUEST_FILENAME}"</span> <span class="na">matchType=</span><span class="s">"IsDirectory"</span> <span class="na">negate=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+                    <span class="nt">&lt;/conditions&gt;</span>
+                    <span class="nt">&lt;action</span> <span class="na">type=</span><span class="s">"Rewrite"</span> <span class="na">url=</span><span class="s">"index.php"</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;/rule&gt;</span>
+            <span class="nt">&lt;/rules&gt;</span>
+        <span class="nt">&lt;/rewrite&gt;</span>
+    <span class="nt">&lt;/system.webServer&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span></code></pre></figure>
+
+                    <h2 id="lighttpd">lighttpd</h2>
+
+                    <p>Your lighttpd configuration file should contain this code (along with other settings you may need). This code requires lighttpd &gt;= 1.4.24.</p>
+
+                    <figure class="highlight"><pre><code class="language-text" data-lang="text">url.rewrite-if-not-file = ("(.*)" =&gt; "/index.php/$0")</code></pre></figure>
+
+                    <p>This assumes that Slim’s <code class="highlighter-rouge">index.php</code> is in the root folder of your project (www root).</p>
+                </div>
+            </div>
+            <footer class="site-footer">
+                <p>
+                    Created and maintained by
+                    <br/>
+                    <a href="http://joshlockhart.com">Josh Lockhart</a>,
+                    <a href="http://www.silentworks.co.uk" target="_blank">Andrew Smith</a>,
+                    <a href="http://akrabat.com/" target="_blank">Rob Allen</a>, and the
+                    <a href="https://github.com/orgs/slimphp/people" target="_blank">Slim Framework Team</a>
+                </p>
+                <p>中文文档由<a href="http://slimphp.net">SlimPHP中文网</a>整理翻译</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/assets/scripts/build/production.min.js"></script>
+</body>
+
+</html>

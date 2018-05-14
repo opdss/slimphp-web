@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>中间件 - SlimPHP中文网</title>
+    <meta name="description" content="" />
+    <meta name="author" content="SlimPHP中文网">
+    <meta name="keywords" content="">
+    <!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script><![endif]-->
+    <link rel="stylesheet" href="/assets/css/all.css" />
+    <link rel="shortcut icon" href="/assets/images/favicon.png" />
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+</head>
+
+<body style="padding-top: 5em">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img src="/assets/images/favicon.png" height="24px" alt="Slim" /></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/components">组件</a></li>
+                    <li class="active"><a href="/docs">文档</a></li>
+                    <li><a href="https://segmentfault.com/t/slim" target="_blank" rel="nofollow">讨论</a></li>
+                    <li><a href="https://github.com/slimphp/slim" target="_blank" rel="nofollow">Github</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper docs">
+        <div class="container-fluid">
+            <header class="site-header">
+                <div class="site-title"><a href="/">Slim</a></div>
+                <div class="site-slogan">一款 PHP 微框架</div>
+            </header>
+
+            <div class="row">
+                <div class="col-md-3">
+
+                    <h3 class="toc-title">开始使用</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs">文档首页</a></li>
+
+                        <li><a href="/docs/start/installation.html">安装</a></li>
+
+                        <li><a href="/docs/start/upgrade.html">升级指南</a></li>
+
+                        <li><a href="/docs/start/web-servers.html">Web 服务器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">教程</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/tutorial/first-app.html">造一款 Slim 应用</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">概念</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/concepts/value-objects.html">PSR 7</a></li>
+
+                        <li><a href="/docs/concepts/middleware.html">中间件</a></li>
+
+                        <li><a href="/docs/concepts/di.html">依赖容器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">The Application</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/application.html">概述</a></li>
+
+                        <li><a href="/docs/objects/application.html#application-configuration">配置</a></li>
+
+                        <li><a href="/docs/objects/application.html#slim-default-settings">默认设置</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">请求</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/request.html">概述</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-method">方法</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-headers">方法</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-body">体</a></li>
+
+                        <li><a href="/docs/objects/request.html#request-helpers">助手</a></li>
+
+                        <li><a href="/docs/objects/request.html#route-object">路由对象</a></li>
+
+                        <li><a href="/docs/objects/request.html#media-type-parsers">媒体类型解析器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">响应</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/response.html">概述</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-status">状态</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-headers">头</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-body">体</a></li>
+
+                        <li><a href="/docs/objects/response.html#returning-json">JSON</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">路由</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/router.html">概述</a></li>
+
+                        <li><a href="/docs/objects/router.html#how-to-create-routes">创建路由</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-callbacks">回调</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-strategies">策略</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-placeholders">占位符</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-names">名称</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-groups">组</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-middleware">中间件</a></li>
+
+                        <li><a href="/docs/objects/router.html#container-resolution">容器识别</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">错误处理</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/handlers/error.html">错误处理器</a></li>
+
+                        <li><a href="/docs/handlers/not-found.html">404 Not Found</a></li>
+
+                        <li><a href="/docs/handlers/not-allowed.html">405 Not Allowed</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">烹饪书</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/cookbook/route-patterns.html">以 / 结尾的路由</a></li>
+
+                        <li><a href="/docs/cookbook/ip-address.html">检索 IP 地址</a></li>
+
+                        <li><a href="/docs/cookbook/retrieving-current-route.html">检索当前路由</a></li>
+
+                        <li><a href="/docs/cookbook/database-eloquent.html">在 Slim 中使用 Eloquent</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">附加组件</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/features/templates.html">模版</a></li>
+
+                        <li><a href="/docs/features/caching.html">HTTP 缓存</a></li>
+
+                        <li><a href="/docs/features/csrf.html">CSRF 保护</a></li>
+
+                        <li><a href="/docs/features/flash.html">Flash Messages</a></li>
+
+                        <li><a href="https://github.com/slimphp/Slim/wiki/Middleware-for-Slim-Framework-v3.x" target="_blank">第三方组件</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-8 docs-content">
+                    <h1 class="page-header">中间件</h1>
+                    <p>你可以在你的 Slim 应用<em>之前（before）</em> 和 <em>之后（after）</em> 运行代码来处理你认为合适的请求和响应对象。这就叫做<em>中间件</em>。为什么要这么做呢？比如你想保护你的应用不遭受跨站请求伪造。也许你想在应用程序运行前验证请求。中间件对这些场景的处理简直完美。</p>
+
+                    <h2 id="what-is-middleware">什么是中间件？</h2>
+
+                    <p>从技术上来讲，中间件是一个接收三个参数的<em>可回调（callable）</em>对象：</p>
+
+                    <ol>
+                        <li><code>\Psr\Http\Message\ServerRequestInterface</code> - PSR7 请求对象</li>
+                        <li><code>\Psr\Http\Message\ResponseInterface</code> - PSR7 响应对象</li>
+                        <li><code>callable</code> - 下一层中间件的回调对象</li>
+                    </ol>
+
+                    <p>它可以做任何与这些对象相应的事情。唯一硬性要求就是中间件<strong>必须</strong>返回一个 <code>\Psr\Http\Message\ResponseInterface</code> 的实例。 每个中间件都
+                        <strong>应当</strong>调用下一层中间件，并讲请求和响应对象作为参数传递给它（下一层中间件）。</p>
+
+                    <h2 id="how-does-middleware-work">中间件是如何工作的？</h2>
+
+                    <p>不同的框架使用中间件的方式不同。在 Slim 框架中，中间件层以同心圆的方式包裹着核心应用。由于新增的中间件层总会包裹所有已经存在的中间件层。当添加更多的中间件层时同心圆结构会不断的向外扩展。</p>
+
+                    <p>当 Slim 应用运行时，请求对象和响应对象从外到内穿过中间件结构。它们首先进入最外层的中间件，然后然后进入下一层，（以此类推）。直到最后它们到达了 Slim 应用程序自身。在 Slim 应用分派了对应的路由后，作为结果的响应对象离开 Slim 应用，然后从内到外穿过中间件结构。最终，最后出来的响应对象离开了最外层的中间件，被序列化为一个原始的 HTTP 响应消息，并返回给 HTTP 客户端。下图清楚的说明了中间件的工作流程：</p>
+
+                    <div style="padding: 2em 0; text-align: center">
+                        <img src="/docs/images/middleware.png" alt="Middleware architecture" style="max-width: 80%;" />
+                    </div>
+
+                    <h2 id="how-do-i-write-middleware">如何编写中间件？</h2>
+
+                    <p>中间件是一个接收三个参数的可回调（callable）对象，三个参数是：请求对象、响应对象以及下一层中间件。中间件<strong>必须</strong>返回一个 <code>\Psr\Http\Message\ResponseInterface</code> 的实例。</p>
+
+                    <h3 id="closure-middleware-example">闭包中间件示例。</h3>
+
+                    <p>这个示例中间件是一个闭包。</p>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="sd">/**</span>
+<span class="sd"> * Example middleware closure</span>
+<span class="sd"> *</span>
+<span class="sd"> * @param  \Psr\Http\Message\ServerRequestInterface $request  PSR7 request</span>
+<span class="sd"> * @param  \Psr\Http\Message\ResponseInterface      $response PSR7 response</span>
+<span class="sd"> * @param  callable                                 $next     Next middleware</span>
+<span class="sd"> *</span>
+<span class="sd"> * @return \Psr\Http\Message\ResponseInterface</span>
+<span class="sd"> */</span>
+<span class="k">function</span> <span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">,</span> <span class="nv">$next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="s1">&#39;BEFORE&#39;</span><span class="p">);</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$next</span><span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">);</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="s1">&#39;AFTER&#39;</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="nv">$response</span><span class="p">;</span>
+<span class="p">};</span></code></pre></div>
+
+                    <h3 id="invokable-class-middleware-example">可调用类的中间件示例。</h3>
+
+                    <p>这个示例中间件是一个实现了 <code>__invoke()</code> 魔术方法的可调用类。</p>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">ExampleMiddleware</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * Example middleware invokable class</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param  \Psr\Http\Message\ServerRequestInterface $request  PSR7 request</span>
+<span class="sd">     * @param  \Psr\Http\Message\ResponseInterface      $response PSR7 response</span>
+<span class="sd">     * @param  callable                                 $next     Next middleware</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return \Psr\Http\Message\ResponseInterface</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__invoke</span><span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">,</span> <span class="nv">$next</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="s1">&#39;BEFORE&#39;</span><span class="p">);</span>
+        <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$next</span><span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">);</span>
+        <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="s1">&#39;AFTER&#39;</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="nv">$response</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+                    <p>要使用这个类作为中间件，你可以使用 <code>-&gt;add( new ExampleMiddleware() );</code> 函数连接在 <code>$app</code>, <code>Route</code>, 或 <code>group()</code> 之后，在下面的代码中，它们中的任意一个都可以表示 $subject。</p>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$subject-&gt;add( new ExampleMiddleware() );</span></code></pre></div>
+
+                    <h2 id="how-do-i-add-middleware">如何添加中间件？</h2>
+
+                    <p>你可以在 Slim 应用中添加中间件，或者添加到一个单独的 Slim 应用路由，或者是路由组。所有场景都能接受相同的中间件和实现相同的中间件接口。</p>
+
+                    <h3 id="application-middleware">应用程序中间件</h3>
+
+                    <p>应用程序中间件被每个<em>传入（incoming）</em> HTTP 请求调用。应用中间件可以通过 Slim 应用实例的 <code>add()</code> 方法来添加。下面这是一个添加上面那个闭包中间件的例子：</p>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="nv">$app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Slim\App</span><span class="p">();</span>
+
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="k">function</span> <span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">,</span> <span class="nv">$next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="s1">&#39;BEFORE&#39;</span><span class="p">);</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$next</span><span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">);</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="s1">&#39;AFTER&#39;</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="nv">$response</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$req</span><span class="p">,</span> <span class="nv">$res</span><span class="p">,</span> <span class="nv">$args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">&#39; Hello &#39;</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">();</span></code></pre></div>
+
+                    <p>输出的 HTTP 响应主体为：</p>
+
+                    <pre><code>BEFORE Hello AFTER
+</code></pre>
+
+                    <h3 id="route-middleware">路由中间件</h3>
+
+                    <p>路由中间件<em>只有</em>在当前 HTTP 请求的方法和 URI 都与中间件所在路由相匹配时才会被调用。路由中间件会在你调用了任意 Slim 应用的路由方法（e.g., <code>get()</code> 或 <code>post()</code>）后被立即指定。 每个路由方法返回一个 <code>\Slim\Route</code> 的实例，这个类提供了相同的中间件接口作为 Slim 应用的实例。使用路由实例的 <code>add()</code> 方法将中间件添加到路由中。下面这是一个添加上面那个闭包中间件的例子：</p>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="nv">$app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Slim\App</span><span class="p">();</span>
+
+<span class="nv">$mw</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">,</span> <span class="nv">$next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="s1">&#39;BEFORE&#39;</span><span class="p">);</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$next</span><span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">);</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="s1">&#39;AFTER&#39;</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="nv">$response</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$req</span><span class="p">,</span> <span class="nv">$res</span><span class="p">,</span> <span class="nv">$args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">&#39; Hello &#39;</span><span class="p">;</span>
+<span class="p">})</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="nv">$mw</span><span class="p">);</span>
+
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">();</span></code></pre></div>
+
+                    <p>输出的 HTTP 响应主体为：</p>
+
+                    <pre><code>BEFORE Hello AFTER
+</code></pre>
+
+                    <h3 id="group-middleware">Group Middleware</h3>
+
+                    <p>除了整个应用，以及标准的路由可用接收中间件，还有 <code>group()</code> 多路由定义功能同样允许在其内部存在独立的路由。路由组中间件<em>只有</em>在其路由与已定义的 HTTP 请求和 URI 中的一个相匹配时才会被调用。要在回调中添加中间件，以及整组中间件，通过在 <code>group()</code> 方法后面连接 <code>add()</code> 来设置。</p>
+
+                    <p>下面的示例程序，在一组 URL 处理程序（url-handlers）中使用了回调中间件。</p>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="k">require_once</span> <span class="nx">__DIR__</span><span class="o">.</span><span class="s1">&#39;/vendor/autoload.php&#39;</span><span class="p">;</span>
+
+<span class="nv">$app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Slim\App</span><span class="p">();</span>
+
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nv">$app</span><span class="o">-&gt;</span><span class="na">group</span><span class="p">(</span><span class="s1">&#39;/utils&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">()</span> <span class="k">use</span> <span class="p">(</span><span class="nv">$app</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$app</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/date&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="nb">date</span><span class="p">(</span><span class="s1">&#39;Y-m-d H:i:s&#39;</span><span class="p">));</span>
+    <span class="p">});</span>
+    <span class="nv">$app</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;/time&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="nb">time</span><span class="p">());</span>
+    <span class="p">});</span>
+<span class="p">})</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="k">function</span> <span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">,</span> <span class="nv">$next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="s1">&#39;It is now &#39;</span><span class="p">);</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$next</span><span class="p">(</span><span class="nv">$request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">);</span>
+    <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="s1">&#39;. Enjoy!&#39;</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="nv">$response</span><span class="p">;</span>
+<span class="p">});</span></code></pre></div>
+
+                    <p>在调用 <code>/utils/date</code> 方法时，将输出类似下面这样子的字符串：</p>
+
+                    <pre><code>It is now 2015-07-06 03:11:01. Enjoy!
+</code></pre>
+
+                    <p>访问 <code>/utils/time</code> 将会输出类似下面这样子的字符串：</p>
+
+                    <pre><code>It is now 1436148762. Enjoy!
+</code></pre>
+
+                    <p>但访问 <code>/</code> <em>域名根目录(domain-root)</em>时，将会有如下输出，因为并没有分配中间件。</p>
+
+                    <pre><code>Hello World
+</code></pre>
+
+                </div>
+            </div>
+            <footer class="site-footer">
+                <p>
+                    Created and maintained by
+                    <br/>
+                    <a href="http://joshlockhart.com">Josh Lockhart</a>,
+                    <a href="http://www.silentworks.co.uk" target="_blank">Andrew Smith</a>,
+                    <a href="http://akrabat.com/" target="_blank">Rob Allen</a>, and the
+                    <a href="https://github.com/orgs/slimphp/people" target="_blank">Slim Framework Team</a>
+                </p>
+                <p>中文文档由<a href="http://slimphp.net">SlimPHP中文网</a>整理翻译</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/assets/scripts/build/production.min.js"></script>
+</body>
+
+</html>

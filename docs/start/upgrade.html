@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>升级指南 - SlimPHP中文网</title>
+    <meta name="description" content="" />
+    <meta name="author" content="SlimPHP中文网">
+    <meta name="keywords" content="">
+    <!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script><![endif]-->
+    <link rel="stylesheet" href="/assets/css/all.css" />
+    <link rel="shortcut icon" href="/assets/images/favicon.png" />
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?5f2c9e3fc7fc3a1c255d557a5fe0ca6b";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script>
+</head>
+
+<body style="padding-top: 5em">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img src="/assets/images/favicon.png" height="24px" alt="Slim" /></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/components">组件</a></li>
+                    <li class="active"><a href="/docs">文档</a></li>
+                    <li><a href="https://segmentfault.com/t/slim" target="_blank" rel="nofollow">讨论</a></li>
+                    <li><a href="https://github.com/slimphp/slim" target="_blank" rel="nofollow">Github</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper docs">
+        <div class="container-fluid">
+            <header class="site-header">
+                <div class="site-title"><a href="/">Slim</a></div>
+                <div class="site-slogan">一款 PHP 微框架</div>
+            </header>
+
+            <div class="row">
+                <div class="col-md-3">
+
+                    <h3 class="toc-title">开始使用</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs">文档首页</a></li>
+
+                        <li><a href="/docs/start/installation.html">安装</a></li>
+
+                        <li><a href="/docs/start/upgrade.html">升级指南</a></li>
+
+                        <li><a href="/docs/start/web-servers.html">Web 服务器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">教程</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/tutorial/first-app.html">造一款 Slim 应用</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">概念</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/concepts/value-objects.html">PSR 7</a></li>
+
+                        <li><a href="/docs/concepts/middleware.html">中间件</a></li>
+
+                        <li><a href="/docs/concepts/di.html">依赖容器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">The Application</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/application.html">概述</a></li>
+
+                        <li><a href="/docs/objects/application.html#application-configuration">配置</a></li>
+
+                        <li><a href="/docs/objects/application.html#slim-default-settings">默认设置</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">请求</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/request.html">概述</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-method">方法</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-headers">方法</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-body">体</a></li>
+
+                        <li><a href="/docs/objects/request.html#request-helpers">助手</a></li>
+
+                        <li><a href="/docs/objects/request.html#route-object">路由对象</a></li>
+
+                        <li><a href="/docs/objects/request.html#media-type-parsers">媒体类型解析器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">响应</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/response.html">概述</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-status">状态</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-headers">头</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-body">体</a></li>
+
+                        <li><a href="/docs/objects/response.html#returning-json">JSON</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">路由</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/router.html">概述</a></li>
+
+                        <li><a href="/docs/objects/router.html#how-to-create-routes">创建路由</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-callbacks">回调</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-strategies">策略</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-placeholders">占位符</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-names">名称</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-groups">组</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-middleware">中间件</a></li>
+
+                        <li><a href="/docs/objects/router.html#container-resolution">容器识别</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">错误处理</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/handlers/error.html">错误处理器</a></li>
+
+                        <li><a href="/docs/handlers/not-found.html">404 Not Found</a></li>
+
+                        <li><a href="/docs/handlers/not-allowed.html">405 Not Allowed</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">烹饪书</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/cookbook/route-patterns.html">以 / 结尾的路由</a></li>
+
+                        <li><a href="/docs/cookbook/ip-address.html">检索 IP 地址</a></li>
+
+                        <li><a href="/docs/cookbook/retrieving-current-route.html">检索当前路由</a></li>
+
+                        <li><a href="/docs/cookbook/database-eloquent.html">在 Slim 中使用 Eloquent</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">附加组件</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/features/templates.html">模版</a></li>
+
+                        <li><a href="/docs/features/caching.html">HTTP 缓存</a></li>
+
+                        <li><a href="/docs/features/csrf.html">CSRF 保护</a></li>
+
+                        <li><a href="/docs/features/flash.html">Flash Messages</a></li>
+
+                        <li><a href="https://github.com/slimphp/Slim/wiki/Middleware-for-Slim-Framework-v3.x" target="_blank">第三方组件</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-8 docs-content">
+                    <h1 class="page-header">升级指南</h1>
+                    <p>如果你打算从 Slim 2 升级到 Slim 3，这里有一些重要的变化，你必须清楚。</p>
+
+                    <h1 id="new-php-version">新的 PHP 版本要求</h1>
+                    <p>Slim 3 要求 PHP 5.5+</p>
+
+                    <h1 id="new-route-function-signature">新的路由函数签名</h1>
+
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php">$app-&gt;get('/', function (Request $req,  Response $res, $args = []) {
+    return $res-&gt;withStatus(400)-&gt;write('Bad Request');
+});</code></pre></figure>
+
+                    <h1 id="getting-get-and-post-variables">获取 _GET 和 _POST 变量</h1>
+
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php">$app-&gt;get('/', function (Request $req,  Response $res, $args = []) {
+    $myvar1 = $req-&gt;getParam('myvar'); //检查 _GET 和 _POST [不遵循 PSR 7]
+    $myvar2 = $req-&gt;getParsedBody()['myvar']; //检查 _POST  [遵循 PSR 7]
+    $myvar3 = $req-&gt;getQueryParams()['myvar']; //检查 _GET [遵循 PSR 7]
+});</code></pre></figure>
+
+                    <h1 id="hooks">钩子 / Hooks</h1>
+                    <p>Slim v3 不再有钩子的概念。You should consider reimplementing any functionality associated with the <a href="http://docs.slimframework.com/hooks/defaults/">default hooks in Slim v2</a> as <a href="/docs/concepts/middleware.html">middleware</a> instead. If you need the ability to apply custom hooks at arbitrary points in your code (for example, within a route), you should consider a third-party package such as <a href="http://symfony.com/doc/current/components/event_dispatcher/introduction.html">Symfony’s EventDispatcher</a> or <a href="https://zend-eventmanager.readthedocs.org/en/latest/">Zend Framework’s EventManager</a>.</p>
+
+                    <h1 id="removal-http-cache">移除 HTTP 缓存</h1>
+                    <p>在 Slim v3 我们将 HTTP 缓存迁移到了单独的模块中： <a href="https://github.com/slimphp/Slim-HttpCache">Slim\Http\Cache</a>.</p>
+
+                    <h1 id="removal-of-stophalt">移除 Stop/Halt</h1>
+                    <p>Slim Core has removed Stop/Halt. In your applications, you should transition to using the withStatus() and withBody() methods.</p>
+
+                    <h1 id="changed-redirect">重定向的改变</h1>
+                    <p>在 Slim v2.x 我们需要使用助手函数 $app->redirect(); 来触发重定向请求。在 Slim v3.x 中，我们可以使用响应类来做这事。</p>
+
+                    <p>Example:</p>
+
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php">$app-&gt;get('/', function ($req, $res, $args) {
+  return $res-&gt;withStatus(302)-&gt;withHeader('Location', 'your-new-uri');
+});</code></pre></figure>
+
+                    <h1 id="middleware-signature">中间件签名</h1>
+                    <p>中间件的签名已经从一个类变成了函数。</p>
+
+                    <p>新的签名：</p>
+
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php">use Psr\Http\Message\RequestInterface as Request;
+use Psr\Http\Message\ResponseInterface as Response;
+
+$app-&gt;add(function (Request $req,  Response $res, callable $next) {
+    // Do stuff before passing along
+    $newResponse = $next($req, $res);
+    // Do stuff after route is rendered
+    return $newResponse; // continue
+});</code></pre></figure>
+
+                    <p>你仍然可以使用类来做签名：</p>
+
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php">namespace My;
+
+use Psr\Http\Message\RequestInterface as Request;
+use Psr\Http\Message\ResponseInterface as Response;
+
+class Middleware
+{
+    function __invoke(Request $req,  Response $res, callable $next) {
+        // Do stuff before passing along
+        $newResponse = $next($req, $res);
+        // Do stuff after route is rendered
+        return $newResponse; // continue
+    }
+}
+
+
+// Register
+$app-&gt;add(new My\Middleware());
+// or
+$app-&gt;add(My\Middleware::class);</code></pre></figure>
+
+                    <h1 id="middleware-execution">Middleware Execution</h1>
+                    <p>Application middleware is executed as Last In First Executed (LIFE).</p>
+
+                    <h1 id="flash-messages">Flash Messages</h1>
+                    <p>Flash messages are no longer a part of the Slim v3 core but instead have been moved to seperate <a href="/docs/features/flash.html">Slim Flash</a> package.</p>
+
+                    <h1 id="cookies">Cookies</h1>
+                    <p>In v3.0 cookies has been removed from core. See <a href="https://github.com/dflydev/dflydev-fig-cookies">FIG Cookies</a> for a PSR-7 compatible cookie component.</p>
+
+                    <h1 id="removal-of-crypto">Removal of Crypto</h1>
+                    <p>In v3.0 we have removed the dependency for crypto in core.</p>
+
+                    <h1 id="new-router">New Router</h1>
+                    <p>Slim now utilizes <a href="https://github.com/nikic/FastRoute">FastRoute</a>, a new, more powerful router!</p>
+
+                    <p>This means that the specification of route patterns has changed with named parameters now in braces and square brackets used for optional segments:</p>
+
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php">// named parameter:
+$app-&gt;get('/hello/{name}', /*...*/);
+
+// optional segment:
+$app-&gt;get('/news[/{year}]', /*...*/);</code></pre></figure>
+
+                    <h1 id="route-middleware">Route Middleware</h1>
+                    <p>The syntax for adding route middleware has changed slightly. In v3.0:</p>
+
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php">$app-&gt;get(…)-&gt;add($mw2)-&gt;add($mw1);</code></pre></figure>
+
+                    <h1 id="urlfor-is-now-pathfor-in-the-router">urlFor() is now pathFor() in the router</h1>
+
+                    <p><code class="highlighter-rouge">urlFor()</code> has been renamed <code class="highlighter-rouge">pathFor()</code> and can be found in the <code class="highlighter-rouge">router</code> object:</p>
+
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php">$app-&gt;get('/', function ($request, $response, $args) {
+    $url = $this-&gt;router-&gt;pathFor('home');
+    $response-&gt;write("<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">'$url'</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>");
+    return $response;
+})-&gt;setName('home');</code></pre></figure>
+
+                    <p>Also, <code class="highlighter-rouge">pathFor()</code> is base path aware.</p>
+
+                    <h1 id="container-and-di--constructing">Container and DI … Constructing</h1>
+                    <p>Slim uses Pimple as a Dependency Injection Container.</p>
+
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php">// index.php
+$app = new Slim\App(
+    new \Slim\Container(
+        include '../config/container.config.php'
+    )
+);
+
+// Slim will grab the Home class from the container defined below and execute its index method.
+// If the class is not defined in the container Slim will still contruct it and pass the container as the first arugment to the constructor!
+$app-&gt;get('/', Home::class . ':index');
+
+
+// In container.config.php
+// We are using the SlimTwig here
+return [
+    'settings' =&gt; [
+        'viewTemplatesDirectory' =&gt; '../templates',
+    ],
+    'twig' =&gt; [
+        'title' =&gt; '',
+        'description' =&gt; '',
+        'author' =&gt; ''
+    ],
+    'view' =&gt; function ($c) {
+        $view = new Twig(
+            $c['settings']['viewTemplatesDirectory'],
+            [
+                'cache' =&gt; false // '../cache'
+            ]
+        );
+
+        // Instantiate and add Slim specific extension
+        $view-&gt;addExtension(
+            new TwigExtension(
+                $c['router'],
+                $c['request']-&gt;getUri()
+            )
+        );
+
+        foreach ($c['twig'] as $name =&gt; $value) {
+            $view-&gt;getEnvironment()-&gt;addGlobal($name, $value);
+        }
+
+        return $view;
+    },
+    Home::class =&gt; function ($c) {
+        return new Home($c['view']);
+    }
+];</code></pre></figure>
+
+                    <h1 id="psr-7-objects">PSR-7 Objects</h1>
+
+                    <h3 id="request-response-uri--uploadfile-are-immutable">Request, Response, Uri &amp; UploadFile are immutable.</h3>
+                    <p>This means that when you change one of these objects, the old instance is not updated.</p>
+
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php">// This is WRONG. The change will not pass through.
+$app-&gt;add(function (Request $request, Response $response, $next) {
+    $request-&gt;withAttribute('abc', 'def');
+    return $next($request, $response);
+});
+
+// This is correct.
+$app-&gt;add(function (Request $request, Response $response, $next) {
+    $request = $request-&gt;withAttribute('abc', 'def');
+    return $next($request, $response);
+});</code></pre></figure>
+
+                    <h3 id="message-bodies-are-streams">Message bodies are streams</h3>
+
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php">// ...
+$image = __DIR__ . '/huge_photo.jpg';
+$body = new Stream($image);
+$response = (new Response())
+     -&gt;withStatus(200, 'OK')
+     -&gt;withHeader('Content-Type', 'image/jpeg')
+     -&gt;withHeader('Content-Length', filesize($image))
+     -&gt;withBody($body);
+// ...</code></pre></figure>
+
+                    <p>For text:</p>
+
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php">// ...
+$response = (new Response())-&gt;getBody()-&gt;write('Hello world!')
+
+// Or Slim specific: Not PSR-7 compliant.
+$response = (new Response())-&gt;write('Hello world!');
+// ...</code></pre></figure>
+                </div>
+            </div>
+            <footer class="site-footer">
+                <p>
+                    Created and maintained by
+                    <br/>
+                    <a href="http://joshlockhart.com">Josh Lockhart</a>,
+                    <a href="http://www.silentworks.co.uk" target="_blank">Andrew Smith</a>,
+                    <a href="http://akrabat.com/" target="_blank">Rob Allen</a>, and the
+                    <a href="https://github.com/orgs/slimphp/people" target="_blank">Slim Framework Team</a>
+                </p>
+                <p>中文文档由<a href="http://slimphp.net">SlimPHP中文网</a>整理翻译</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/assets/scripts/build/production.min.js"></script>
+</body>
+
+</html>

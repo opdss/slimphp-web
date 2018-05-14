@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>依赖容器 - SlimPHP中文网</title>
+    <meta name="description" content="" />
+    <meta name="author" content="SlimPHP中文网">
+    <meta name="keywords" content="">
+    <!--[if lt IE 9]><script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script><![endif]-->
+    <link rel="stylesheet" href="/assets/css/all.css" />
+    <link rel="shortcut icon" href="/assets/images/favicon.png" />
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+</head>
+
+<body style="padding-top: 5em">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img src="/assets/images/favicon.png" height="24px" alt="Slim" /></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/components">组件</a></li>
+                    <li class="active"><a href="/docs">文档</a></li>
+                    <li><a href="https://segmentfault.com/t/slim" target="_blank" rel="nofollow">讨论</a></li>
+                    <li><a href="https://github.com/slimphp/slim" target="_blank" rel="nofollow">Github</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper docs">
+        <div class="container-fluid">
+            <header class="site-header">
+                <div class="site-title"><a href="/">Slim</a></div>
+                <div class="site-slogan">一款 PHP 微框架</div>
+            </header>
+
+            <div class="row">
+                <div class="col-md-3">
+
+                    <h3 class="toc-title">开始使用</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs">文档首页</a></li>
+
+                        <li><a href="/docs/start/installation.html">安装</a></li>
+
+                        <li><a href="/docs/start/upgrade.html">升级指南</a></li>
+
+                        <li><a href="/docs/start/web-servers.html">Web 服务器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">教程</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/tutorial/first-app.html">造一款 Slim 应用</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">概念</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/concepts/value-objects.html">PSR 7</a></li>
+
+                        <li><a href="/docs/concepts/middleware.html">中间件</a></li>
+
+                        <li><a href="/docs/concepts/di.html">依赖容器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">The Application</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/application.html">概述</a></li>
+
+                        <li><a href="/docs/objects/application.html#application-configuration">配置</a></li>
+
+                        <li><a href="/docs/objects/application.html#slim-default-settings">默认设置</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">请求</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/request.html">概述</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-method">方法</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-headers">方法</a></li>
+
+                        <li><a href="/docs/objects/request.html#the-request-body">体</a></li>
+
+                        <li><a href="/docs/objects/request.html#request-helpers">助手</a></li>
+
+                        <li><a href="/docs/objects/request.html#route-object">路由对象</a></li>
+
+                        <li><a href="/docs/objects/request.html#media-type-parsers">媒体类型解析器</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">响应</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/response.html">概述</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-status">状态</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-headers">头</a></li>
+
+                        <li><a href="/docs/objects/response.html#the-response-body">体</a></li>
+
+                        <li><a href="/docs/objects/response.html#returning-json">JSON</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">路由</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/objects/router.html">概述</a></li>
+
+                        <li><a href="/docs/objects/router.html#how-to-create-routes">创建路由</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-callbacks">回调</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-strategies">策略</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-placeholders">占位符</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-names">名称</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-groups">组</a></li>
+
+                        <li><a href="/docs/objects/router.html#route-middleware">中间件</a></li>
+
+                        <li><a href="/docs/objects/router.html#container-resolution">容器识别</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">错误处理</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/handlers/error.html">错误处理器</a></li>
+
+                        <li><a href="/docs/handlers/not-found.html">404 Not Found</a></li>
+
+                        <li><a href="/docs/handlers/not-allowed.html">405 Not Allowed</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">烹饪书</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/cookbook/route-patterns.html">以 / 结尾的路由</a></li>
+
+                        <li><a href="/docs/cookbook/ip-address.html">检索 IP 地址</a></li>
+
+                        <li><a href="/docs/cookbook/retrieving-current-route.html">检索当前路由</a></li>
+
+                        <li><a href="/docs/cookbook/database-eloquent.html">在 Slim 中使用 Eloquent</a></li>
+
+                    </ul>
+
+                    <h3 class="toc-title">附加组件</h3>
+                    <ul class="toc-links">
+
+                        <li><a href="/docs/features/templates.html">模版</a></li>
+
+                        <li><a href="/docs/features/caching.html">HTTP 缓存</a></li>
+
+                        <li><a href="/docs/features/csrf.html">CSRF 保护</a></li>
+
+                        <li><a href="/docs/features/flash.html">Flash Messages</a></li>
+
+                        <li><a href="https://github.com/slimphp/Slim/wiki/Middleware-for-Slim-Framework-v3.x" target="_blank">第三方组件</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-8 docs-content">
+                    <h1 class="page-header">依赖容器（Dependency Container）</h1> 
+                    <p>Slim 使用依赖容器来准备、管理和注入应用程序的相关依赖。Slim 支持 <a href="https://github.com/container-interop/container-interop">Container-Interop</a> 接口实现的容器。你可以使用 Slim 的内置容器（基于 <a href="http://pimple.sensiolabs.org/">Pimple</a>）或者第三方的容器，比如 <a href="https://github.com/jeremeamia/acclimate-container">Acclimate</a> 或 <a href="http://php-di.org/">PHP-DI</a>。</p>
+
+                    <h2 id="how-to-use-the-container">如何使用容器</h2>
+
+                    <p>你并不<em>必须</em>提供一个依赖容器。如果你提供了，那么，你必须注入此容器的实例到 Slim 应用程序的构造函数中。</p>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">$container = new \Slim\Container;</span>
+<span class="x">$app = new \Slim\App($container);</span></code></pre></div>
+
+                    <p>你可以显式或隐式地从依赖容器中获取服务。你可以像下面这样子从 Slim 应用程序的路由中获取一个显示的容器实例。</p>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">/**</span>
+<span class="x"> * Example GET route</span>
+<span class="x"> *</span>
+<span class="x"> * @param  \Psr\Http\Message\ServerRequestInterface $req  PSR7 request</span>
+<span class="x"> * @param  \Psr\Http\Message\ResponseInterface      $res  PSR7 response</span>
+<span class="x"> * @param  array                                    $args Route parameters</span>
+<span class="x"> *</span>
+<span class="x"> * @return \Psr\Http\Message\ResponseInterface</span>
+<span class="x"> */</span>
+<span class="x">$app-&gt;get(&#39;/foo&#39;, function ($req, $res, $args) {</span>
+<span class="x">    $myService = $this-&gt;get(&#39;myService&#39;);</span>
+
+<span class="x">    return $res;</span>
+<span class="x">});</span></code></pre></div>
+
+                    <p>你可以这样隐式地从容器中取得服务：</p>
+
+                    <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">/**</span>
+<span class="x"> * Example GET route</span>
+<span class="x"> *</span>
+<span class="x"> * @param  \Psr\Http\Message\ServerRequestInterface $req  PSR7 request</span>
+<span class="x"> * @param  \Psr\Http\Message\ResponseInterface      $res  PSR7 response</span>
+<span class="x"> * @param  array                                    $args Route parameters</span>
+<span class="x"> *</span>
+<span class="x"> * @return \Psr\Http\Message\ResponseInterface</span>
+<span class="x"> */</span>
+<span class="x">$app-&gt;get(&#39;/foo&#39;, function ($req, $res, $args) {</span>
+<span class="x">    $myService = $this-&gt;myService;</span>
+
+<span class="x">    return $res;</span>
+<span class="x">});</span></code></pre></div>
+
+                    <p>Slim uses <code class="highlighter-rouge">__get()</code> and <code class="highlighter-rouge">__isset()</code> magic methods that defer to the application’s
+container for all properties that do not already exist on the application instance.</p>
+
+                    <h2 id="required-services">必需的服务</h2>
+
+                    <p>你的容器必须实现这些必需的服务。如果你使用的是 Slim 内置的容器，这些服务都是已经准备好了的。如果你选择使用第三方容器，那么你必须自己来实现这些服务。</p>
+
+                    <dl>
+                        <dt>settings</dt>
+                        <dd>应用程序设置项的关联数组（Associative array），包括以下关键字：
+                            <ul>
+                                <li><code class="highlighter-rouge">httpVersion</code></li>
+                                <li><code class="highlighter-rouge">responseChunkSize</code></li>
+                                <li><code class="highlighter-rouge">outputBuffering</code></li>
+                                <li><code class="highlighter-rouge">determineRouteBeforeAppMiddleware</code>.</li>
+                                <li><code class="highlighter-rouge">displayErrorDetails</code>.</li>
+                            </ul>
+                        </dd>
+                        <dt>environment</dt>
+                        <dd><code>\Slim\Interfaces\Http\EnvironmentInterface</code> 的实例.</dd>
+                        <dt>request</dt>
+                        <dd><code>\Psr\Http\Message\ServerRequestInterface</code>的实例.</dd>
+                        <dt>response</dt>
+                        <dd><code>\Psr\Http\Message\ResponseInterface</code>的实例.</dd>
+                        <dt>router</dt>
+                        <dd><code>\Slim\Interfaces\RouterInterface</code>的实例.</dd>
+                        <dt>foundHandler</dt>
+                        <dd><code class="highlighter-rouge">\Slim\Interfaces\InvocationStrategyInterface</code> 的实例.</dd>
+                        <dt>phpErrorHandler</dt>
+                        <dd>PHP 7 错误被抛出时调用的 Callable。这个 callable <strong>必须</strong>返回一个 <code class="highlighter-rouge">\Psr\Http\Message\ResponseInterface</code> 的实例，并接收三个参数：</dd>
+                    </dl>
+
+                    <ol>
+                        <li><code class="highlighter-rouge">\Psr\Http\Message\ServerRequestInterface</code></li>
+                        <li><code class="highlighter-rouge">\Psr\Http\Message\ResponseInterface</code></li>
+                        <li><code class="highlighter-rouge">\Error</code></li>
+                    </ol>
+
+                    <dl>
+                        <dt>errorHandler</dt>
+                        <dd>抛出异常时调用的 Callable。这个 callable <strong>必须</strong>返回一个 <code class="highlighter-rouge">\Psr\Http\Message\ResponseInterface</code> 的实例，并接收三个参数：</dd>
+                    </dl>
+
+                    <ol>
+                        <li><code class="highlighter-rouge">\Psr\Http\Message\ServerRequestInterface</code></li>
+                        <li><code class="highlighter-rouge">\Psr\Http\Message\ResponseInterface</code></li>
+                        <li><code class="highlighter-rouge">\Exception</code></li>
+                    </ol>
+
+                    <dl>
+                        <dt>notFoundHandler</dt>
+                        <dd>如果当前的 HTTP 请求 URI 未能匹配到应用程序路由，则调用这个 Callable。这个 callable <strong>必须</strong>返回一个 <code class="highlighter-rouge">\Psr\Http\Message\ResponseInterface</code> 的实例，并接收三个参数：</dd>
+                    </dl>
+
+                    <ol>
+                        <li><code class="highlighter-rouge">\Psr\Http\Message\ServerRequestInterface</code></li>
+                        <li><code class="highlighter-rouge">\Psr\Http\Message\ResponseInterface</code></li>
+                    </ol>
+
+                    <dl>
+                        <dt>notAllowedHandler</dt>
+                        <dd>如果一个应用程序路由匹配到当前 HTTP 请求的路径而不是它的方法，则调用这个 Callable。这个 callable <strong>必须</strong> 返回一个 <code class="highlighter-rouge">\Psr\Http\Message\ResponseInterface</code> 的实例并接收三个参数：</dd>
+                    </dl>
+
+                    <ol>
+                        <li><code class="highlighter-rouge">\Psr\Http\Message\ServerRequestInterface</code></li>
+                        <li><code class="highlighter-rouge">\Psr\Http\Message\ResponseInterface</code></li>
+                        <li>Array of allowed HTTP methods</li>
+                    </ol>
+
+                    <dl>
+                        <dt>callableResolver</dt>
+                        <dd><code class="highlighter-rouge">\Slim\Interfaces\CallableResolverInterface</code> 的实例.</dd>
+                    </dl>
+
+                </div>
+            </div>
+            <footer class="site-footer">
+                <p>
+                    Created and maintained by
+                    <br/>
+                    <a href="http://joshlockhart.com">Josh Lockhart</a>,
+                    <a href="http://www.silentworks.co.uk" target="_blank">Andrew Smith</a>,
+                    <a href="http://akrabat.com/" target="_blank">Rob Allen</a>, and the
+                    <a href="https://github.com/orgs/slimphp/people" target="_blank">Slim Framework Team</a>
+                </p>
+                <p>中文文档由<a href="http://slimphp.net">SlimPHP中文网</a>整理翻译</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/assets/scripts/build/production.min.js"></script>
+</body>
+
+</html>
